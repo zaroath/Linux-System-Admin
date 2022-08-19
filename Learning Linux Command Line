@@ -1,1 +1,14 @@
 ls -l Desktop/ - "use tab for auto fill"
+ls -l
+man ls
+ls --help
+help
+apropos list
+cd Documents/
+pwd
+cd Exercise\ Files or cd "Exercise Files"
+ls -R departments/
+cd departments/hr/policies/
+cd ..
+cd ../../finance/documents/
+cd -
