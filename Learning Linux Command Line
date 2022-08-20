@@ -12,3 +12,21 @@ cd departments/hr/policies/
 cd ..
 cd ../../finance/documents/
 cd -
+mkdir newfolder
+mkdir departments/customerservice [creating a new folder named customerservice]
+mkdir departments/customerservice/documents departments/customerservice/cases departments/customerservice/awards [creating multiple folders at same time]
+mkdir -p departments/legal/contracts [creating folder within a folder]
+rmdir departments/legal/contracts/  [deleting a folder]
+rmdir departments/legal/
+rmdir customerservice/
+rmdir: failed to remove 'customerservice/': Directory not empty [can delete an empty folder only]
+cp poems.txt poems2.txt
+cp simple_data.txt departments/hr/employee\ info/ [copy simple_data.txt to employee info folder]
+mv poems2.txt departments/marketing/  [moving peoms2.txt to marketing folder]
+mv departments/marketing/poems2.txt departments/marketing/literature.txt [changing the name poems2.txt as literature.txt ]
+mv departments/marketing/literature.txt  .  [return literature.txt to current directory using "."]
+mv *.txt departments/marketing/  [move all .txt file into marketing folder]
+mv departments/marketing/* .    [return all files back to current directory using "."]
+rm literature.txt	[delete literature.txt]
+rm departments/customerservice/ [rm: cannot remove 'departments/customerservice/': Is a directory]
+rm -r departments/customerservice/	[delete folder and the folders inside it as well]
