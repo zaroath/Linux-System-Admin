@@ -30,3 +30,25 @@ mv departments/marketing/* .    [return all files back to current directory usin
 rm literature.txt	[delete literature.txt]
 rm departments/customerservice/ [rm: cannot remove 'departments/customerservice/': Is a directory]
 rm -r departments/customerservice/	[delete folder and the folders inside it as well]
+find . -name "poe*"	[find files,docs starting with poe]
+find . -name "*d*"	[find files,docs which has letter d]
+~/Documents/ -name "*d*"
+[ahmed@rhhost1-localnet-com Exercise Files]$ ls /root	ls: cannot open directory '/root': Permission denied
+sudo ls /root
+sudo -k		[give up super user previllages]
+sudo -s		[change permenantly to super user ]
+ls -l test.sh
+stat test.sh 
+chmod 644 test.sh	[changing permissions 6 = r+w, 4 =r]
+./test.sh		[run the executable file]
+chmod 755 test.sh	[changing permissions 7 means full permission to user 7 = rwx]
+chmod a-x test.sh 	[remove executing permission for user,group and other]
+bash test.sh		[can run from bash after changing the permission]
+cat test.sh		[read the file]
+chmod u-r test.sh	[restricting reading permission]
+chmod 244 test.sh	[only write permission for user]
+touch newfile
+stat newfile
+nano test.sh
+sudo chown root test.sh
+sudo chown ahmed test.sh
