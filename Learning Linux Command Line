@@ -52,3 +52,59 @@ stat newfile
 nano test.sh
 sudo chown root test.sh
 sudo chown ahmed test.sh
+ln -s poems.txt writing.txt	[creating a softlink named writing.txt]
+cat writing.txt
+ln poems.txt words.txt		[creating a hard link]
+echo "greetings"
+echo "greetings" | wc
+echo "greetings from rocky linux command line" | wc
+cat poems.txt 	[read the text in poems.txt]
+head poems.txt
+tail poems.txt
+head -n5 peoms.txt
+tail -n3 poems.txcat poems.txt | cat -n | tail -n5
+cat poems.txt | tail -n5 | cat -n
+less poems.txt
+cat poems.txt | less
+grep "the" poems.txt		[find 'the' in the poems file]
+grep -n  "the" poems.txt	[find 'the' in the poems file and show the line number]
+grep -in  "the" poems.txt	[find 'the' or 'The' in the poems file and show the line number ]
+grep -vi  "the" poems.txt	[omit lines which consists 'the']
+grep -E "[hijk]" poems.txt	[find letter 'h','i','j','k']
+grep -E "\w{6,}" poems.txt	[find words larger than 6 characters]
+awk '{print $2}' simple_data.txt	[print the 2nd column in the simple_data.txt]
+awk '{print $2 "\t" $1}' simple_data.txt	[print the 2nd & 1st column respectively in the simple_data.txt]
+awk '{print $2 "\t" $1}' simple_data.txt | sort -n	[print the 2nd & 1st column respectively in the simple_data.txt and sort in numerical order]
+sed s/Orange/Red/ simple_data.txt		[change the 'Orange' as 'Red' in Team column]
+sort simple_data.txt 		[sort the contents in simple_data.txt]
+sort -k2 simple_data.txt	[sort the contents in simple_data.txt by column 2(ID)]
+sort -k2 -n simple_data.txt	[sort the contents in simple_data.txt by column 2(ID) in numerical order]
+sort -u dupes.txt		[sort by not showing duplicates]
+tac simple_data.txt
+rev simple_data.txt 
+vi	[opne vim]
+vi poems.txt [open a document in vim]
+i	[insert at cursor location]
+I	[Insert at beginning of line]
+o	[Insert on following line]
+Esc		[enter command mode]
+Esc : w		[save file]
+Esc : wq	[save and exit]
+Esc : q!	[exit without saving]
+tar -cvf myfiles.tar Exercise\ Files/	[creating tar file which includes all the files in the Exercise files]
+tar -cvaf myfiles.tar.gz Exercise\ Files/	[creating tar file which includes all the files in the Exercise files with gzip compression]
+tar -caf myfiles.tar.bz2 Exercise\ Files	[creating tar file which includes all the files in the Exercise files with bzip compression]
+mkdir unpack1	[creating a folder unpack1]
+mv myfiles.tar.bz2 unpack1	[move myfiles.tar.bz2 to unpack1]
+cd unpack1/
+tar -xf myfiles.tar.bz2		[extract the myfiles.tar.bz2]
+mkdir unpack2
+tar -xf myfiles.tar.gz -C unpack2	[extract myfiles.tar.gz in upack2 folder]
+zip -r  exfiles.zip Exercise\ Files/	[create zip file for Exercise files as exfiles.zip]
+mkdir unpack3
+mv exfiles.zip  unpack3
+cd unpack3
+unzip exfiles.zip
+mkdir unpack4
+unzip unpack3/exfiles.zip -d unpack4	[unzip exfiles.zip into unpack4 file]
+
